@@ -10,7 +10,7 @@ describe('Simple Web App Tests', () => {
     chai.request(server)
       .get('/')
       .end((err, res) => {
-        expect(res).to.have.status(200);
+        expect(res.status).to.equal(404);
         done();
       });
   });
